@@ -1,0 +1,32 @@
+In this example, we are introducing the concept of Hooks and using useState & useEffect hook.
+
+
+Hooks basically allow us to "hook" into React features such as state and lifecycle methods.
+useState hook - To manage states. Returns a stateful value and an updater function to update it.
+useEffect hook - To manage side-effects like API calls, subscriptions, timers, mutations, and more. 
+
+useEffect accepts two arguments. The second argument is optional on the basis of which it has 3 cases:
+useEffect(<function>, <dependency>)
+1. If no dependency is given then useEffect 'll run on every component render 
+2. If empty array is given as a dependancy then it'll run first time only
+3. If any state or Props is given then it'll run first time and on every dependancy change
+
+In this code we have made a function App in which we have initilized our first hook named as useState. 
+Using this state hook we are setting the value of count and set the initial value count as zero.
+
+Then we are make a useEffect hook function, in which we are calling a pre-define setTimeout function (which itself excute only once) 
+and it takes two arguments a function and time in milliseconds. 
+
+Here in our code we are making a function (for seTimeout function) in which we are taking count value and 
+incrementing the count value by 1 and giving 1000(1sec) as another argument. 
+
+The <h1> tag will render first with 0 value but as useEffect must run once as the componenet renders, it will
+increment count value and then update the count value as 1 in h1 tag. 
+
+
+
+
+
+
+
+
